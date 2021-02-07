@@ -1,38 +1,73 @@
-.App {
+.tabs {
+    display: grid;
+    grid-template-columns: auto 320px;
+    grid-template-rows: 1fr;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 999;
+  }
+  
+.panel-list {
+  padding: 0.5rem 1rem 0;
+  position: relative;
+}
+
+.panel-title {
   text-align: center;
+  font-size: 2.5rem;
+  color: var(--ink-black);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tab-list{
+  background: var(--light-blue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.tab {
   color: white;
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.tab:hover{
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tab-txt {
+  justify-self: start;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .tabs{
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7vh auto;
   }
-  to {
-    transform: rotate(360deg);
+  .tab-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0 0.25rem;
+    grid-row: 1;
+  }
+  .tab {
+    padding: 0;
+    grid-template-columns: auto;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,251,.15);
+  }
+  .tab:hover {
+    box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.2);
+  }
+  .tab span {
+    text-align: center;
+    display: none;
   }
 }

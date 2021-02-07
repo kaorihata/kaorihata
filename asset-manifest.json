@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kaorihata/static/css/main.3e48bfb1.chunk.css",
+    "main.js": "/kaorihata/static/js/main.ce0576b4.chunk.js",
+    "main.js.map": "/kaorihata/static/js/main.ce0576b4.chunk.js.map",
+    "runtime-main.js": "/kaorihata/static/js/runtime-main.4d97d590.js",
+    "runtime-main.js.map": "/kaorihata/static/js/runtime-main.4d97d590.js.map",
+    "static/js/2.9efe267b.chunk.js": "/kaorihata/static/js/2.9efe267b.chunk.js",
+    "static/js/2.9efe267b.chunk.js.map": "/kaorihata/static/js/2.9efe267b.chunk.js.map",
+    "index.html": "/kaorihata/index.html",
+    "static/css/main.3e48bfb1.chunk.css.map": "/kaorihata/static/css/main.3e48bfb1.chunk.css.map",
+    "static/js/2.9efe267b.chunk.js.LICENSE.txt": "/kaorihata/static/js/2.9efe267b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d97d590.js",
+    "static/js/2.9efe267b.chunk.js",
+    "static/css/main.3e48bfb1.chunk.css",
+    "static/js/main.ce0576b4.chunk.js"
+  ]
+}

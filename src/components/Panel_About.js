@@ -1,17 +1,22 @@
 import styled from '@emotion/styled'
 
+
 /* 
   * style
 */
 
 const Content = styled.div`
-  height: 550px;
+  height: 670px;
   display: grid;
   grid-template-rows: 40% auto;
   grid-gap: 1rem;
   gap: 1rem;
   margin: 1.5rem auto 0;
   justify-items: center;
+
+  @media (max-width: 576px) {
+    height: 570px;
+  }
 `
 const Img = styled.div`
   width: 220px;
@@ -61,12 +66,12 @@ const Links = styled.div`
 
 
 function About() {
-
+  
   return (
     <>
       <Content>
         <Img>
-          <img src="./images/about01.png" alt="profile" style={{borderRadius:'50%'}} />
+          <img src={process.env.PUBLIC_URL + '/images/about01.png'} alt="profile" style={{borderRadius:'50%'}} />
         </Img>
         <Intro>
           <h2>Kaori</h2>
@@ -78,15 +83,15 @@ function About() {
       </Content>
       <Links>
           <a href="https://unsplash.com/@kaorihata">
-            <img src="./images/link-unsplash.svg" alt=""/>
+            <img src={process.env.PUBLIC_URL + "/images/link-unsplash.svg"} alt="Unsplash"/>
             Unsplash
           </a>
           <a href="https://github.com/kaorihata">
-            <img src="./images/link-github.svg" alt=""/>
+            <img src={process.env.PUBLIC_URL + "/images/link-github.svg"} alt="Github"/>
             Github
           </a>
           <a href="https://codepen.io/kaorihata">
-            <img src="./images/link-codepen.svg" alt=""/>
+            <img src={process.env.PUBLIC_URL + "/images/link-codepen.svg"} alt="Codepen"/>
             Codepen
           </a>
       </Links>

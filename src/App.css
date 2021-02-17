@@ -1,7 +1,6 @@
 .tabs {
-    display: grid;
-    grid-template-columns: auto 320px;
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 0;
     right: 0;
@@ -12,6 +11,7 @@
   }
   
 .panel-list {
+  width: calc(100vw - 320px);
   padding: 0.5rem 1rem 0;
   position: relative;
 }
@@ -23,6 +23,7 @@
 }
 
 .tab-list{
+  width: 320px;
   background: var(--light-blue);
 }
 
@@ -47,19 +48,20 @@
 }
 
 @media (max-width: 768px) {
-  .tabs{
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 7vh auto;
+  .tabs{  
   }
   .tab-list{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    padding: 0 0.25rem;
-    grid-row: 1;
+    position: fixed;
+  }
+  .panel-list{
+    width: 100%;
+    margin-top: 70px;
   }
   .tab {
-    padding: 0;
+    padding: 0.75rem 0;
     grid-template-columns: auto;
     box-shadow: inset 2px 2px 2px 0px rgba(255,255,251,.15);
   }

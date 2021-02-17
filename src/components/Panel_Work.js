@@ -39,25 +39,25 @@ const worksData = [
   {
     id: 1,
     title: 'Product Photographer',
-    image: './images/work01.png',
+    image: '/images/work01.png',
     text: 'I have worked at Antique Art online shop as product photographer from March 2017 to March 2018.',
   },
   {
     id: 2,
     title: 'Internship',
-    image: './images/work02.png',
+    image: '/images/work02.png',
     text: 'While I attended language course in Japan, I did an internship at the digital marketing company for six months.',
   },
   {
     id: 3,
     title: 'Administrative assistant',
-    image: './images/work03.png',
+    image: '/images/work03.png',
     text: "After the end of the internship, I started to work as an administrative assistant in the prepress department at the head office.",
   },
   {
     id: 4,
     title: 'Front-end Developer',
-    image: './images/work04.png',
+    image: '/images/work04.png',
     text: 'Lately, I’ve been learning JavaScript, Node, React and set my goal to become a front end developer.',
   },
 ]
@@ -74,11 +74,11 @@ function Work() {
     <div className="panel-content">
       {works.map((work) => (
         <div key={work.id} className="panel-item">
-          <img src={work.image} style={ icon } alt={work.title} />
+          <img src={process.env.PUBLIC_URL + `${work.image}`} style={ icon } alt={work.title} />
           <p>{work.text}</p>
         </div>
       ))}
-      <Button target="_blank" rel="noreferrer noopener" href="https://www.figma.com/file/GKwgcx8UZuHr7B8Tj7TZZv/chin-yufang-kaori-Resume">Read more</Button>
+      <Button target="_blank" rel="noreferrer noopener" href="https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:854a0778-2711-4e4d-acf0-76313dd2eb76">Read more</Button>
     </div>
   );
 }

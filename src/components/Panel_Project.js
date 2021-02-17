@@ -31,7 +31,7 @@ const projectsData = [
   {
     id: 1,
     title: 'HW Web Studio',
-    image: './images/project01.png',
+    image: '/images/project01.png',
     text: 'One-page portfolio website includes interactive designs with high usability',
     url: 'https://kaorihata.github.io/HW_WebStudio/',
     github: 'https://github.com/kaorihata/HW_WebStudio/',
@@ -39,7 +39,7 @@ const projectsData = [
   {
     id: 2,
     title: 'Janken',
-    image: './images/project02.png',
+    image: '/images/project02.png',
     text: 'Janken (じゃん拳) is the Japanese version of Rock Paper Scissors',
     url: 'https://kaorihata.github.io/Janken/',
     github: 'https://github.com/kaorihata/Janken/',
@@ -47,7 +47,7 @@ const projectsData = [
   {
     id: 3,
     title: 'City Weather',
-    image: './images/project03.png',
+    image: '/images/project03.png',
     text: 'An easy-to-use weather application that allows users to easily search the weather and time',
     url: 'https://kaorihata.github.io/CityWeather/',
     github: 'https://github.com/kaorihata/CityWeather/',
@@ -55,7 +55,7 @@ const projectsData = [
   {
     id: 4,
     title: 'Daily',
-    image: './images/project04.png',
+    image: '/images/project04.png',
     text: 'A News website gathering daily information from New York Times',
     url: 'https://kaorihata.github.io/Daily/',
     github: 'https://github.com/kaorihata/daily/',
@@ -75,7 +75,7 @@ function Project() {
       {projects.map((project) => (
         <div key={project.id} className="panel-item">
           <a target="_blank" rel="noreferrer noopener" href={project.url}>
-            <Img src={project.image} alt={project.title}/>
+            <Img src={process.env.PUBLIC_URL + `${project.image}`} alt={project.title}/>
           </a> 
           <p>
             <Strong>{project.title}: </Strong>{project.text}... <Link target="_blank" href={project.github}>read more</Link>
